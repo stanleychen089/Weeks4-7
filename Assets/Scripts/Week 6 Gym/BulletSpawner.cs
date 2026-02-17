@@ -30,7 +30,7 @@ public class BulletSpawner : MonoBehaviour
         {
             spawnedBullet = Instantiate(bulletPrefab,transform.position, transform.rotation);
             audioSource.PlayOneShot(shotSound);
-            movementScript = spawnedBullet.GetComponent<BulletMovement>();
+            //movementScript = spawnedBullet.GetComponent<BulletMovement>();
 
         }
 
