@@ -5,7 +5,7 @@ public class BulletMovement : MonoBehaviour
 {
     public float speed = 7;
     public float timer = 0;
-    public float destructionTime = 5; 
+    public float destructionTime = 3; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,11 +20,7 @@ public class BulletMovement : MonoBehaviour
         //movement
         transform.position += transform.right * speed * Time.deltaTime;
 
-        timer += Time.deltaTime;
-        if (timer > destructionTime)
-        {
-            Destroy(gameObject);
-            timer = 0;
-        }
+        Destroy(gameObject, destructionTime); 
+        
     }
 }

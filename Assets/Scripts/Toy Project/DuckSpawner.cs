@@ -4,24 +4,32 @@ public class DuckSpawner : MonoBehaviour
 {
     public GameObject duckPrefab;
     public GameObject spawnedDuck;
+    public GameObject playerTransform;
     public float timer;
-    public float spawnDuration; 
+    public float spawnDuration;
+
+    public DuckMovement movementScript;
 
     void Start()
     {
-        
+        spawnDuration = Random.Range(3, 6);
     }
 
     // Update is called once per frame
     void Update()
     {
-        spawnDuration = Random.Range(3, 6);
-        Vector2 randomLoco = (Vector2)transform.position + Random.insideUnitCircle; 
+        
         timer += Time.deltaTime;  
         if (timer > spawnDuration)
         {
+            Vector2 randomLoco = (Vector2)transform.position + Random.insideUnitCircle;
             spawnedDuck = Instantiate(duckPrefab, randomLoco, Quaternion.identity);
-            timer = 0; 
+
+            //Need the spawned duck to getcomponent of the player's position 
+            spawnedDuck.GetComponent<DuckMovement>().playerObject = playerTransform; 
+            
+            timer = 0;
+            spawnDuration = Random.Range(3, 6);
         }
     }
 }
