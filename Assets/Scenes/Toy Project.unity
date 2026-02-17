@@ -553,6 +553,56 @@ MonoBehaviour:
   movementScript: {fileID: 0}
   audioSource: {fileID: 1428094202}
   shotSound: {fileID: 8300000, guid: 5903467212ee3754d97a9435cb638ff9, type: 3}
+--- !u!1 &1893504379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893504381}
+  - component: {fileID: 1893504380}
+  m_Layer: 0
+  m_Name: Duck Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1893504380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893504379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbff3e9424be11449a03f2856b284c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duckPrefab: {fileID: 6410286573088135093, guid: b357d732d764a864997119527c2ba8b8, type: 3}
+  spawnedDuck: {fileID: 0}
+  playerTransform: {fileID: 253181109}
+  timer: 0
+  spawnDuration: 0
+  movementScript: {fileID: 0}
+--- !u!4 &1893504381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893504379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.8, y: -0.63, z: 0.052572343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2106125738
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,3 +696,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1002582460}
   - {fileID: 253181112}
+  - {fileID: 1893504381}
