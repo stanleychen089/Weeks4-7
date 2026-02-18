@@ -103,3 +103,5 @@ MonoBehaviour:
   speed: 7
   timer: 0
   destructionTime: 3
+  bulletSR: {fileID: 0}
+  duckPrefab: {fileID: 6410286573088135093, guid: b357d732d764a864997119527c2ba8b8, type: 3}

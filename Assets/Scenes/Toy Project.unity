@@ -404,8 +404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156313693476a6444a49ed5e68901574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
-  spawnedBullet: {fileID: 0}
 --- !u!1 &1428094200
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +449,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5903467212ee3754d97a9435cb638ff9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -550,6 +548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7309079942819570129, guid: 81168948f7c930e47b6fe14a6202f489, type: 3}
   spawnedBullet: {fileID: 0}
+  duckSpawner: {fileID: 1893504380}
   movementScript: {fileID: 0}
   audioSource: {fileID: 1428094202}
   shotSound: {fileID: 8300000, guid: 5903467212ee3754d97a9435cb638ff9, type: 3}
@@ -588,6 +587,7 @@ MonoBehaviour:
   timer: 0
   spawnDuration: 0
   movementScript: {fileID: 0}
+  duckSpawns: []
 --- !u!4 &1893504381
 Transform:
   m_ObjectHideFlags: 0

@@ -2,9 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class BarrelPointer : MonoBehaviour
-{
-    public GameObject bulletPrefab;
-    public GameObject spawnedBullet; 
+{ 
     void Start()
     {
         
@@ -18,9 +16,5 @@ public class BarrelPointer : MonoBehaviour
         Vector2 direction = mousePos - (Vector2)transform.position;
         transform.up = direction;
 
-        //if (Mouse.current.leftButton.wasPressedThisFrame)
-        //{
-        //    spawnedBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-        //}
     }
 }

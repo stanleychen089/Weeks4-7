@@ -6,14 +6,14 @@ public class BulletSpawner : MonoBehaviour
     //object references 
     public GameObject bulletPrefab;
     public GameObject spawnedBullet;
+    public DuckSpawner duckSpawner; 
 
     //script reference
     public BulletMovement movementScript;
 
     //sound references
     public AudioSource audioSource;
-    public AudioClip shotSound; 
-
+    public AudioClip shotSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,10 +29,14 @@ public class BulletSpawner : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             spawnedBullet = Instantiate(bulletPrefab,transform.position, transform.rotation);
+            
             audioSource.PlayOneShot(shotSound);
-            //movementScript = spawnedBullet.GetComponent<BulletMovement>();
+            //get duckSpawner gameObject component into every spawned bullet
+            spawnedBullet.GetComponent<BulletMovement>().duckSpawner = duckSpawner;
 
         }
+
+
 
 
     }
