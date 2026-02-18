@@ -44,7 +44,9 @@ public class BulletMovement : MonoBehaviour
         //only check for duckSR if at least 1 duckSR exists
         if (duckSR != null && bulletSR.bounds.Contains(duckSR.transform.position))
         {
+            //destroy both the duck and duck if they collide
             Destroy(gameObject);
+            Destroy(duckSR);
         }
 
         //if (bulletSR.bounds.Contains(duckSR.transform.position))

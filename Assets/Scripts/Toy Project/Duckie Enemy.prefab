@@ -101,4 +101,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
-  speed: 2
+  speed: 12

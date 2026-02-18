@@ -18,7 +18,7 @@ public class DuckSpawner : MonoBehaviour
 
     void Start()
     {
-        spawnDuration = Random.Range(3, 6);
+        spawnDuration = Random.Range(2, 3);
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class DuckSpawner : MonoBehaviour
         timer += Time.deltaTime;  
         if (timer > spawnDuration)
         {
-            Vector2 randomLoco = (Vector2)transform.position + Random.insideUnitCircle;
+            Vector2 randomLoco = (Vector2)transform.position + Random.insideUnitCircle*3;
             spawnedDuck = Instantiate(duckPrefab, randomLoco, Quaternion.identity);
 
             //add spawnedDucks into list of duckSpawns
